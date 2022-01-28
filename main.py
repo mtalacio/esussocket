@@ -3,6 +3,7 @@ import threading
 import random
 
 def onNewClient(client, address):
+    print("Connected to client")
     while True:
         try:
             msg = client.recv(1024)
