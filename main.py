@@ -14,7 +14,7 @@ def onNewClient(client, address):
             print(battery)
             print(speed)
             msg = str(speed) + "," + str(battery)
-            client.sendall(bin(msg))
+            client.sendall(msg.encode())
         except ConnectionAbortedError:
             print("Connection Closed")
             break
